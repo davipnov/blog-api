@@ -6,7 +6,7 @@ import java.time.LocalDate;
 import java.util.UUID;
 
 @Entity
-@Table(name = "tb_comentario")
+@Table(name = "comentario")
 public class ComentarioModel implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -19,7 +19,7 @@ public class ComentarioModel implements Serializable {
     private LocalDate data;
 
     @Lob
-    @Column(columnDefinition = "TEXT", nullable = false)
+    @Column(columnDefinition = "longtext", nullable = false)
     private String comentario;
 
     @ManyToOne(fetch = FetchType.LAZY)

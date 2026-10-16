@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.UUID;
 
 @Entity
-@Table(name = "tb_post")
+@Table(name = "post")
 public class PostModel implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -27,7 +27,7 @@ public class PostModel implements Serializable {
     private String titulo;
 
     @Lob
-    @Column(columnDefinition = "TEXT", nullable = false)
+    @Column(columnDefinition = "longtext", nullable = false)
     private String texto;
 
     @OneToMany(mappedBy = "post", cascade = CascadeType.ALL, orphanRemoval = true)
