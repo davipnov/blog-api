@@ -12,4 +12,6 @@ import java.util.UUID;
 public interface PostRepository extends JpaRepository<PostModel, UUID> {
 
     Page<PostModel> findByTituloContainingIgnoreCase(String titulo, Pageable pageable);
+
+
 }
